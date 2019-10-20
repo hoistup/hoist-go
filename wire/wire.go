@@ -19,4 +19,7 @@ const (
 type (
 	ErkNilDetails      erk.DefaultKind
 	ErkJSONMarshalling erk.DefaultKind
+	ErkUnableToRead    erk.DefaultKind
+	ErkHeaderInvalid   erk.DefaultKind
+	ErkEncodingInvalid erk.DefaultKind
 )
