@@ -11,13 +11,14 @@ import (
 
 	"github.com/JosiahWitt/erk"
 	"github.com/JosiahWitt/erk/erg"
+	"github.com/hoistup/hoist-go/erks"
 	"github.com/hoistup/hoist-go/strand"
 	"github.com/hoistup/hoist-go/wire"
 )
 
 type (
-	ErkHoistInit  erk.DefaultKind
-	ErkBadRequest erk.DefaultKind
+	ErkHoistInit  struct{ erks.Default }
+	ErkBadRequest struct{ erks.Default }
 )
 
 var (
