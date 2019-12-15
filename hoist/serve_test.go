@@ -13,6 +13,7 @@ import (
 	"time"
 
 	"github.com/JosiahWitt/erk"
+	"github.com/hoistup/hoist-go/erks"
 	"github.com/hoistup/hoist-go/hoist"
 	"github.com/hoistup/hoist-go/strand"
 	"github.com/hoistup/hoist-go/wire"
@@ -52,7 +53,7 @@ func (ExportedError) Export() string {
 	return "ExportedError.Export()"
 }
 
-type ErkError erk.DefaultKind
+type ErkError struct{ erks.Default }
 
 var ErrErkError = erk.New(ErkError{}, "my erk error")
 

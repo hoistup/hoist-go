@@ -5,11 +5,12 @@ import (
 	"reflect"
 
 	"github.com/JosiahWitt/erk"
+	"github.com/hoistup/hoist-go/erks"
 )
 
 type (
-	ErkInvalidFunction erk.DefaultKind
-	ErkFunctionCall    erk.DefaultKind
+	ErkInvalidFunction struct{ erks.Default }
+	ErkFunctionCall    struct{ erks.Default }
 )
 
 var (

@@ -2,9 +2,10 @@ package hoist
 
 import (
 	"github.com/JosiahWitt/erk"
+	"github.com/hoistup/hoist-go/erks"
 )
 
-type ErkFunctionNotFound erk.DefaultKind
+type ErkFunctionNotFound struct{ erks.Default }
 
 var (
 	ErrFunctionNotFound   = erk.New(ErkFunctionNotFound{}, "service '{{.serviceName}}' does not have function '{{.fnName}}'")
